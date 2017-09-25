@@ -4,8 +4,7 @@ COPY . /go/src/github.com/GeorgeYuen/webhookViewer
 
 ENV CGO_ENABLED=0
 
-RUN apt-get update && \
- apt-get install glide && \
+RUN curl https://glide.sh/get | sh  && \
  cd /go/src/github.com/GeorgeYuen/webhookViewer && \
  glide install && \
  go build
