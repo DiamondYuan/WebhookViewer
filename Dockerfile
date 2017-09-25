@@ -4,9 +4,12 @@ COPY . /go/src/github.com/GeorgeYuen/webhookViewer
 
 ENV CGO_ENABLED=0
 
-RUN sudo add-apt-repository ppa:masterminds/glide && sudo apt-get update
-RUN sudo apt-get install glide
-RUN cd /go/src/github.com/GeorgeYuen/webhookViewer && glide install && go build
+RUN apt-get add-apt-repository ppa:masterminds/glide && \
+ apt-get update && \
+ apt-get install glide && \
+ cd /go/src/github.com/GeorgeYuen/webhookViewer && \
+ glide install && \
+ go build
 
 FROM alpine:3.6
 
