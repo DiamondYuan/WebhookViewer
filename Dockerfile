@@ -4,8 +4,8 @@ COPY . /go/src/github.com/GeorgeYuen/webhookViewer
 
 ENV CGO_ENABLED=0
 
-RUN curl https://glide.sh/get | sh  && \
- cd /go/src/github.com/GeorgeYuen/webhookViewer && \
+RUN curl https://glide.sh/get | sh
+RUN cd /go/src/github.com/GeorgeYuen/webhookViewer && \
  glide install && \
  go build
 
