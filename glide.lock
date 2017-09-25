@@ -1,0 +1,6 @@
+hash: 6e9d0c9089a99fd0985243d6681de4d6ac17834cb7af1e7d3156c65875b1d3f8
+updated: 2017-09-25T10:49:20.7904714+08:00
+imports:
+- name: github.com/go-macaron/macaron
+  version: 97f995df0bf34ca1a77c00704c9278476275566b
+testImports: []
